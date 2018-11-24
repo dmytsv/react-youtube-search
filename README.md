@@ -1,5 +1,8 @@
 ## A simple youtube search app
 
+React App for search videos using youtube API.
+Styling - Semantic UI
+
 Based on [Create React App](https://github.com/facebook/create-react-app)
 
 ### Supported commands

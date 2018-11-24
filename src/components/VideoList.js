@@ -1,7 +1,7 @@
 import React from "react";
 import VideoListItem from "./VideoListItem";
 
-const VideoList = ({ videos, onVideoSelect }) => {
+const VideoList = ({ videos, onVideoSelect, selectedVideo }) => {
   const renderedList = videos.map(video => (
     <VideoListItem
       onVideoSelect={onVideoSelect}
@@ -9,7 +9,11 @@ const VideoList = ({ videos, onVideoSelect }) => {
       video={video}
     />
   ));
-  return <div className="ui relaxed divided list">{renderedList}</div>;
+  return (
+    <div className={selectedVideo ? "five wide column" : ""}>
+      <div className="ui relaxed divided list">{renderedList}</div>
+    </div>
+  );
 };
 
 export default VideoList;
